@@ -1,0 +1,14 @@
+1. Da una explicación del código que utilizaste en el ejercicios 1
+agregue la funcion seleccionar_especialidad, esta permite que el usuario pueda elegir entre 3 opociones ya programadas,
+cada una con su respectivo mensaje, esta va de la mano con la de conversar, ya que se pide primero la especialidad 
+despues suelta la lista de comandos, y durante la conversacion se pueden utilizar
+
+2. Da una explicación del código que utilizaste en el ejercicios 2
+agregue la funcion nueva_conversacion la cual no importa lo demas que se comento, habra reemplazado la conversacion
+esto da practicamente que regresa el mensaje con la especialidad, elimina el anterior historial y crea uno nuevo 
+dando como resultado el comando nuevo
+
+3. Da una explicación del código que utilizaste en el ejercicios 3
+hice una  tercera funcion llamada mostrar_historial, esta separado por lineas para mayor lectura pero regra la funcion 
+de hirtorial en un formato de bucle para que el usuario vea que escribio 
+dando como resultado el comando historial 

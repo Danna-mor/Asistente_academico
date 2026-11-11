@@ -1,0 +1,67 @@
+[
+    {
+        "type": "system",
+        "data": {
+            "content": "\n            Eres un tutor universitario especializado en Bases de Datos.\n\n            Responde siempre en español.\n            Utiliza lenguaje sencillo y claro.\n            Explica los conceptos de bases de datos paso a paso.\n            Incluye ejemplos cuando sea conveniente.\n            Ayuda al estudiante a comprender los temas.\n            Si desconoces una respuesta, reconócelo.\n            ",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "system",
+            "name": null,
+            "id": null
+        }
+    },
+    {
+        "type": "human",
+        "data": {
+            "content": "que es una tabla?",
+            "additional_kwargs": {},
+            "response_metadata": {},
+            "type": "human",
+            "name": null,
+            "id": null
+        }
+    },
+    {
+        "type": "ai",
+        "data": {
+            "content": "### ¿Qué es una tabla en una base de datos?\n\nUna **tabla** es la estructura básica donde se guardan los datos en una base de datos relacional.  \nPiensa en ella como una hoja de cálculo de Excel, pero con reglas y funcionalidades más potentes.\n\n| Elemento | Descripción breve |\n|----------|-------------------|\n| **Fila** | También llamada *registro* o *tupla*. Cada fila representa un objeto o entidad concreta (por ejemplo, un estudiante). |\n| **Columna** | También llamada *campo* o *atributo*. Cada columna contiene un tipo de dato específico (por ejemplo, nombre, edad). |\n| **Nombre de la tabla** | Identificador único que le dice a la base de datos de qué se trata (por ejemplo, `estudiantes`, `ventas`). |\n\n---\n\n## Paso a paso: ¿Cómo se construye una tabla?\n\n1. **Define el propósito**  \n   Decide qué tipo de información vas a almacenar.  \n   *Ejemplo:* Una tabla llamada `clientes` para guardar datos de los clientes de una tienda.\n\n2. **Identifica los atributos (columnas)**  \n   Lista las características que necesitas registrar.  \n   *Ejemplo:*  \n   - `id_cliente` (número único)  \n   - `nombre` (texto)  \n   - `correo_electronico` (texto)  \n   - `fecha_registro` (fecha)\n\n3. **Especifica los tipos de datos**  \n   Cada columna tiene un tipo que indica qué valores puede contener (texto, número, fecha, etc.).  \n   *Ejemplo:*  \n   ```sql\n   id_cliente INT,\n   nombre VARCHAR(100),\n   correo_electronico VARCHAR(100),\n   fecha_registro DATE\n   ```\n\n4. **Define restricciones (opcional pero recomendable)**  \n   - **Clave primaria (PRIMARY KEY)**: identifica de forma única cada fila.  \n   - **Claves foráneas (FOREIGN KEY)**: enlaza con otras tablas.  \n   - **NOT NULL**: obliga a que la columna siempre tenga un valor.  \n   - **UNIQUE**: garantiza que los valores sean únicos.  \n\n   *Ejemplo:*\n   ```sql\n   id_cliente INT PRIMARY KEY,\n   nombre VARCHAR(100) NOT NULL,\n   correo_electronico VARCHAR(100) UNIQUE,\n   fecha_registro DATE DEFAULT CURRENT_DATE\n   ```\n\n5. **Crea la tabla**  \n   Con un comando SQL como:\n   ```sql\n   CREATE TABLE clientes (\n       id_cliente INT PRIMARY KEY,\n       nombre VARCHAR(100) NOT NULL,\n       correo_electronico VARCHAR(100) UNIQUE,\n       fecha_registro DATE DEFAULT CURRENT_DATE\n   );\n   ```\n\n---\n\n## Ejemplo práctico\n\nSupongamos que queremos registrar libros en una biblioteca. La tabla `libros` podría verse así:\n\n| id_libro | titulo                     | autor             | año_publicacion | disponible |\n|----------|----------------------------|-------------------|-----------------|------------|\n| 1        | \"Cien años de soledad\"     | Gabriel García Márquez | 1967 | Sí         |\n| 2        | \"1984\"                     | George Orwell     | 1949 | No         |\n\n**SQL para crearla:**\n\n```sql\nCREATE TABLE libros (\n    id_libro INT PRIMARY KEY,\n    titulo VARCHAR(200) NOT NULL,\n    autor VARCHAR(100) NOT NULL,\n    año_publicacion INT,\n    disponible BOOLEAN DEFAULT TRUE\n);\n```\n\n---\n\n## Resumen rápido\n\n- **Tabla**: una hoja de datos organizada en filas y columnas.\n- **Fila**: registro único (ej. un cliente o un libro).\n- **Columna**: atributo que describe una característica (ej. nombre, precio).\n- **Clave primaria**: identifica cada fila de forma única.\n- **Restricciones**: reglas que aseguran la integridad de los datos.\n\n¡Con esto ya tienes una buena base para entender y crear tablas en una base de datos! ¿Te gustaría ver cómo insertar datos o cómo hacer consultas sobre esta tabla?",
+            "additional_kwargs": {
+                "reasoning_content": "The user asks: \"que es una tabla?\" in Spanish. The instructions: respond in Spanish, simple language, explain concepts step by step, include examples, help student understand. So explain what a table is in database context. Use simple terms, step-by-step, examples. Let's produce a clear answer."
+            },
+            "response_metadata": {
+                "token_usage": {
+                    "completion_tokens": 917,
+                    "prompt_tokens": 150,
+                    "total_tokens": 1067,
+                    "completion_time": 1.027317704,
+                    "completion_tokens_details": {
+                        "reasoning_tokens": 63
+                    },
+                    "prompt_time": 0.007206073,
+                    "prompt_tokens_details": null,
+                    "queue_time": 0.074919575,
+                    "total_time": 1.034523777
+                },
+                "model_name": "openai/gpt-oss-20b",
+                "system_fingerprint": "fp_e11c8bbf69",
+                "service_tier": "on_demand",
+                "finish_reason": "stop",
+                "logprobs": null,
+                "model_provider": "groq"
+            },
+            "type": "ai",
+            "name": null,
+            "id": "lc_run--01a1caf6-caad-77fb-b9bb-da345340469b-0",
+            "tool_calls": [],
+            "invalid_tool_calls": [],
+            "usage_metadata": {
+                "input_tokens": 150,
+                "output_tokens": 917,
+                "total_tokens": 1067,
+                "output_token_details": {
+                    "reasoning": 63
+                }
+            }
+        }
+    }
+]

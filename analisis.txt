@@ -1,0 +1,33 @@
+ETAPA 2. Configuracion del comportamiento
+¿Qué función tiene el mensaje de sistema?
+son los parametros o instrucciones a seguir para el asistente 
+¿Qué cambia entre enviar una pregunta directamente y definir instrucciones de comportamiento?
+como no tiene limitaciones, o puede dar demasiada informacion, o no aclarar correctamente
+
+ETAPA 3. Implementacion de memoria conversacional
+¿Por qué guardar mensajes del usuario?
+el usuario puede necesitarlos asi como una consistencia en peticiones
+¿Por qué guardar también las respuestas?
+para tener el historial
+¿Qué sucede si solo se envía la pregunta actual?
+no sabra de que tema en la siguinete pregunta
+
+ETAPA 4. Persistencia
+¿En qué difieren memoria y persistencia?
+memoria: recordar el historial
+persistencia: lograruna continuedad en los mensajes
+¿Por qué convertir mensajes para almacenarlos en JSON?
+es mas facil para si quieres ver tu historial asi como menos pesado para tu memoria interna
+¿Qué sucede si historial.json no existe?
+colapsa el modelo en la parte de persistencia y memoria
+
+ETAPA 5. Pruebas finales
+¿Qué componente se conecta con el modelo?
+en el modelo
+¿Dónde se definen las instrucciones?
+en el asistente
+¿Dónde reside la memoria durante la ejecución?
+historial.json
+¿Qué diferencia existe entre modelo local y API Key?
+el local tiene una gama mas amplia de tokens, asi como personalizacion con modelos independientes
+el de API key tiene un numero predeterminado de tokens gratiutos, trabajas con un solo modelo
